@@ -10,4 +10,4 @@ Piirangud
 2. UNIQUE 
 3. NOT NULL - ei lubada tühjad väärtused
 4. Foreign Key - saab kasutada ainult teise tabeli väärtused
-5.
+5. CHECK - saab sisestada ainult check määratud väärtused
