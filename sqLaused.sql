@@ -1,1 +1,6 @@
-
+-- SQL kommentaar
+-- SQL Server Managment Stuudio
+-- connect to 
+-- (localdb)mssqllocaldb
+-- Windows Auth - admini õigused
+-- SQL Server Auth - 
