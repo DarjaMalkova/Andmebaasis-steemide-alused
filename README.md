@@ -13,3 +13,5 @@ NOT NULL ei lubada tühjad väärtused
 Foreign Key - saab kasutada ainult teise tabeli väärtused
 
 CHECK - saab sisestada ainult check määratud väärtused CHECK (mees, naine)
+
+![image](https://github.com/user-attachments/assets/19b52659-05cc-4c7c-953c-b0dd54d29525)
