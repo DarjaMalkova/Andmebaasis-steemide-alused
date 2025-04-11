@@ -1,7 +1,3 @@
-XAMP Control PAnel ( start Apache, Start mysql )
-
-
-
 CREATE DATABASE MalkovaTiT;
 --Object Explorer on vaja pidevalt uuendada käsitsi!
 USE MalkovaTiT;
@@ -77,3 +73,15 @@ ADD foreign key (opilaneID) references opilane (opilaneID);
 INSERT INTO hinne(opilaneID, oppeaine, hinne)
 Values(3, 'andmebaasid', 3);
 SELECT * FROM hinne;
+
+CREATE TABLE opitaja(
+opitajaID int Primary Key identity(1,1),
+eesnimi varchar(25),
+perenimi varchar(30) Unique,
+telefon TEXT,
+);
+
+INSERT INTO opitaja(eesnimi, perenimi, telefon)
+VALUES ('Jekaterina', 'Rätsep', '37256794678')
+
+SELECT * FROM opitaja
