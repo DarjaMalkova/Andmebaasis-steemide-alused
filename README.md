@@ -15,3 +15,5 @@ Foreign Key - saab kasutada ainult teise tabeli väärtused
 CHECK - saab sisestada ainult check määratud väärtused CHECK (mees, naine)
 
 ![image](https://github.com/user-attachments/assets/19b52659-05cc-4c7c-953c-b0dd54d29525)
+
+![image](https://github.com/user-attachments/assets/7ab5c43a-d177-4db3-8379-e598ff134a9d)
