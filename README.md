@@ -17,3 +17,15 @@ CHECK - saab sisestada ainult check määratud väärtused CHECK (mees, naine)
 ![image](https://github.com/user-attachments/assets/19b52659-05cc-4c7c-953c-b0dd54d29525)
 
 ![image](https://github.com/user-attachments/assets/7ab5c43a-d177-4db3-8379-e598ff134a9d)
+
+![image](https://github.com/user-attachments/assets/4944ba69-7348-45af-955d-b6a300822fea)
+
+![image](https://github.com/user-attachments/assets/78814266-adf3-4d7a-9e4d-96a6ce78f1d1)
+
+![image](https://github.com/user-attachments/assets/ea1d6700-718a-4d35-8c84-cc55dcecea82)
+
+![image](https://github.com/user-attachments/assets/f6a150df-d6e0-49f8-9998-e51df9f2d9a9)
+
+![image](https://github.com/user-attachments/assets/271b32b0-cabf-4b49-9b75-0362f97230cb)
+
+![image](https://github.com/user-attachments/assets/a84cb924-972d-424f-abba-6354f2ebe6e9)
