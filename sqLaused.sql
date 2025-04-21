@@ -85,3 +85,4 @@ INSERT INTO opitaja(eesnimi, perenimi, telefon)
 VALUES ('Jekaterina', 'Rätsep', '37256794678')
 
 SELECT * FROM opitaja
+
