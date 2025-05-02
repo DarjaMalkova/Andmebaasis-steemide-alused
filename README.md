@@ -29,3 +29,7 @@ CHECK - saab sisestada ainult check määratud väärtused CHECK (mees, naine)
 ![image](https://github.com/user-attachments/assets/271b32b0-cabf-4b49-9b75-0362f97230cb)
 
 ![image](https://github.com/user-attachments/assets/a84cb924-972d-424f-abba-6354f2ebe6e9)
+
+![image](https://github.com/user-attachments/assets/3d3fe81c-7112-41c8-8de4-49f760a8e828)
+
+![image](https://github.com/user-attachments/assets/b6ca8d08-6817-423a-80d9-7038a0bef919)
