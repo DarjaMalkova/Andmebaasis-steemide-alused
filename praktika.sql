@@ -7,11 +7,11 @@ aadress VARCHAR(20),
 telefon VARCHAR(20)
 );
 
-insert into firma (firmaID, firmanimi, aadress, telefon) values (1, 'Twimbo', '297 Independence Lane', '359-418-6019');
-insert into firma (firmaID, firmanimi, aadress, telefon) values (2, 'Thoughtmix', '8173 Mayfield Court', '693-624-0811');
-insert into firma (firmaID, firmanimi, aadress, telefon) values (3, 'Flashset', '20 Springview Lane', '109-822-3305');
-insert into firma (firmaID, firmanimi, aadress, telefon) values (4, 'Gevee', '46997 Merchant Center', '492-763-9127');
-insert into firma (firmaID, firmanimi, aadress, telefon) values (5, 'Jabberbean', '01936 Fisk Trail', '509-259-9482');
+insert into firma (firmanimi, aadress, telefon) values ('Devbug', '10 Glendale Alley', '784-246-4831');
+insert into firma (firmanimi, aadress, telefon) values ('Bubbletube', '37 Elmside Place', '840-265-8178');
+insert into firma (firmanimi, aadress, telefon) values ('Centizu', '1 Maple Point', '101-780-9377');
+insert into firma (firmanimi, aadress, telefon) values ('Skipfire', '840 Algoma Crossing', '262-773-1828');
+SELECT * FROM firma
 
 create table praktikajuhendaja (
 	praktikajuhendajaID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -20,6 +20,12 @@ create table praktikajuhendaja (
 	synniaeg DATE,
 	telefon VARCHAR(50)
 );
+
+insert into praktikajuhendaja (eesnimi, perekonnanimi, synniaeg, telefon) values ('Florette', 'Ilsley', '6/10/2000', '654-351-3458');
+insert into praktikajuhendaja (eesnimi, perekonnanimi, synniaeg, telefon) values ('Carlin', 'Corben', '9/9/2000', '384-115-1422');
+insert into praktikajuhendaja (eesnimi, perekonnanimi, synniaeg, telefon) values ('Marie-ann', 'MacKim', '10/19/2000', '645-323-2421');
+insert into praktikajuhendaja (eesnimi, perekonnanimi, synniaeg, telefon) values ('Hermia', 'Freemantle', '9/14/2000', '945-443-6579');
+SELECT * FROM praktikajuhendaja
 
 CREATE TABLE praktikabaas (
 praktikabaasID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
