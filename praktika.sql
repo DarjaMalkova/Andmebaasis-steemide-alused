@@ -36,3 +36,74 @@ juhendajaID INT,
 FOREIGN KEY (firmaID) REFERENCES firma(firmaID),
 FOREIGN KEY (juhendajaID) REFERENCES praktikajuhendaja(praktikajuhendajaID)
 );
+
+INSERT INTO praktikabaas (praktikatingimused, arvutiprogramm)
+VALUES 
+('turundus', 'Canva'),
+('programmeerinine', 'IntelliJ IDEA'),
+('andmesisestus', 'Access'),
+('projektijuhtimine', 'Trello');
+
+SELECT * FROM praktikabaas
+
+CREATE TABLE Praktikabaas_logi(
+id int primary key identity(1,1),
+tegevus varchar(25),
+kasutaja varchar(25),
+aeg datetime,
+andmed TEXT
+);
+
+CREATE TRIGGER praktikabaasLisamine
+ON praktikabaas
+FOR INSERT 
+AS
+INSERT INTO Praktikabaas_logi(kasutaja, tegevus, aeg, andmed)
+SELECT 
+SYSTEM_USER,
+'praktikabaas on lisatud',
+GETDATE(),
+CONCAT (firma.firmanimi, ',' ,firma.aadress, ',' , ',' ,praktikajuhendaja.perekonnanimi, ',' ,praktikajuhendaja.eesnimi, ',' ,inserted.praktikatingimused, ',' ,inserted.arvutiprogramm)
+FROM inserted
+inner join firma on inserted.firmaID=firma.firmaID
+inner join praktikajuhendaja on inserted.juhendajaID=praktikajuhendaja.praktikajuhendajaID;
+SELECT * FROM praktikabaas;
+SELECT * FROM Praktikabaas_logi;
+
+
+
+DROP TRIGGER firmaLisamine
+
+CREATE TRIGGER praktikabaasKustutamine
+ON praktikabaas
+FOR DELETE 
+AS
+INSERT INTO Praktikabaas_logi(kasutaja, tegevus, aeg, andmed)
+SELECT 
+SYSTEM_USER,
+'baas on kustutatud',
+GETDATE(),
+CONCAT (deleted.praktikatingimused, ',' ,deleted.arvutiprogramm)
+FROM deleted;
+DELETE FROM praktikabaas WHERE praktikabaasID = 1;
+SELECT * FROM praktikabaas;
+SELECT * FROM Praktikabaas_logi;
+
+DROP TRIGGER praktikabaasKustutamine
+
+CREATE TRIGGER trg_Check_Juhendaja_Synniaeg
+ON praktikajuhendaja
+INSTEAD OF INSERT
+AS
+BEGIN
+IF EXISTS (SELECT 1 FROM inserted WHERE synniaeg > GETDATE())
+BEGIN
+RAISERROR('Sünniaeg ei tohi olla tulevikus.', 16, 1);
+END
+ELSE
+BEGIN
+INSERT INTO praktikajuhendaja (eesnimi, perekonnanimi, synniaeg, telefon)
+SELECT eesnimi, perekonnanimi, synniaeg, telefon
+FROM inserted;
+END
+END;
