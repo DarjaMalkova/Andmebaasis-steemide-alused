@@ -83,3 +83,14 @@ END;
 UPDATE Õppimine
 SET hinne = 5
 WHERE isiku_id = 1 AND oppeaine_id = 101;
+
+BEGIN TRANSACTION;
+SELECT * FROM Isik;
+
+INSERT INTO Isik (eesnimi, perenimi, sugu, sunnikuupaev, aadress, email )
+VALUES ('Jana', 'Silm', 'N', '2001-06-25', 'kuldnoka 18', 'silm@gmail.com');
+
+SAVE TRANSACTION MySavePoint;
+
+ROLLBACK TRANSACTION MySavePoint;
+SELECT * FROM Isik;
